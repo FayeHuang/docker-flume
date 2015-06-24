@@ -44,8 +44,8 @@ RUN mv $FLUME_HOME/conf/flume-env.sh.template $FLUME_HOME/conf/flume-env.sh
 # (2) yum install hadoop hbase
 # (3) setting cluster hostname IP mapping
 # (4) copy client conf
-#COPY cloudera-cdh5.repo /etc/yum.repos.d/cloudera-cdh5.repo
-COPY hdp.repo /etc/yum.repos.d/hdp.repo
+COPY cloudera-cdh5.repo /etc/yum.repos.d/cloudera-cdh5.repo
+#COPY hdp.repo /etc/yum.repos.d/hdp.repo
 RUN yum install -y hadoop hbase && yum clean all
 
 #
